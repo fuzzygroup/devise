@@ -50,6 +50,7 @@ class DeviseController < Devise.parent_controller.constantize
 
   # Returns a signed in resource from session (if one exists)
   def signed_in_resource
+    raise "INTO signed_in_resource"
     warden.authenticate(scope: resource_name)
   end
 
